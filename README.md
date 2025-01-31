@@ -76,7 +76,21 @@ This command applies the necessary resources to deploy the k6 Operator in your c
 Once installed, verify that the k6 Operator is running by checking the deployed pods:
 
 ```bash
-kubectl get pods -n k6-operator
+kubectl get pods -n k6-operator-system
+```
+
+Now, we back to this repository folder and go create a configmap with our K6 test plan:
+
+```bash
+oc project k6-operator-system
+cd k6
+oc create configmap k6-api-test --from-file kafka-load-tests.js
+```
+
+Finally, we do create a k6 instance with this command:
+
+```bash
+oc apply -f k6-sample.yaml
 ```
 
 For more details about the k6 Operator and its capabilities, refer to the official documentation:
