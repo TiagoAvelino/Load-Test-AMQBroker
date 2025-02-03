@@ -66,7 +66,7 @@ oc logs -f deployment/load-test-amqbroker
 To install the k6 Operator, which facilitates running distributed load tests within your OpenShift cluster, execute the following command:
 
 ```bash
-curl https://raw.githubusercontent.com/grafana/k6-operator/main/bundle.yaml | kubectl apply -f -
+curl https://raw.githubusercontent.com/grafana/k6-operator/main/bundle.yaml | oc apply -f -
 ```
 
 This command applies the necessary resources to deploy the k6 Operator in your cluster.
