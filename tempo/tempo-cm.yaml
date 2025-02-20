@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: minio
+stringData:
+  endpoint: http://minio-service.minio.svc.cluster.local:9000
+  bucket: tempo
+  access_key_id: 734Vxr34ujtjHwrPGJiJ
+  access_key_secret: 7LQzpiK0Kmludy1QZ2u0mB6PETjZ8bPXFXwZDWgJ
+type: Opaque

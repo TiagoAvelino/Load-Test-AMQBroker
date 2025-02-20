@@ -61,12 +61,14 @@ For further debugging and logs:
 oc logs -f deployment/load-test-amqbroker
 ```
 
+## Installing Tempo Operator for Request Observability
+
 ## Installing k6 Operator for Load Testing
 
 To install the k6 Operator, which facilitates running distributed load tests within your OpenShift cluster, execute the following command:
 
 ```bash
-curl https://raw.githubusercontent.com/grafana/k6-operator/main/bundle.yaml | oc apply -f -
+curl https://raw.githubusercontent.com/grafana/k6-operator/main/bundle.yaml | oc n apply -f -
 ```
 
 This command applies the necessary resources to deploy the k6 Operator in your cluster.
@@ -84,7 +86,7 @@ Now, we back to this repository folder and go create a configmap with our K6 tes
 ```bash
 oc project k6-operator-system
 cd k6
-oc create configmap k6-api-test --from-file load-tests.js
+oc create configmap k6-api-test --from-file load-test.js
 ```
 
 Finally, we do create a k6 instance with this command:
