@@ -100,3 +100,5 @@ For more details about the k6 Operator and its capabilities, refer to the offici
 
 You can also watch this tutorial for a step-by-step guide:
 [k6 Load Testing on Kubernetes using the k6 Operator](https://www.youtube.com/watch?v=IJ0uQgn7gI8)
+
+TODO: TRABALHAR EM UM PROJETO DE BALANCEAMENTO DE CARGA ENTRE NÓS
